@@ -2,20 +2,18 @@ package com.example.mainactivity_viikko_8;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.WindowDecorActionBar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 
 public class MainActivity extends AppCompatActivity {
-    private EditText euroInput;
+    private EditText EuroInput;
     private TextView ResultText;
 
 
@@ -26,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        euroInput = findViewById(R.id.euroInput);
+        EuroInput = findViewById(R.id.EuroInput);
         ResultText = findViewById(R.id.ResultText);
 
 
@@ -38,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void convertToUSD(View view) {
-        String input = euroInput.getText().toString();
+        String input = EuroInput.getText().toString();
         if (input.isEmpty()) {
             ResultText.setText("Syötä eurot");
             return;
@@ -53,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void convertToGDP(View view) {
-        String input = euroInput.getText().toString();
+        String input = EuroInput.getText().toString();
 
         if (input.isEmpty()) {
             ResultText.setText("Syötä eurot");
